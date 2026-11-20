@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Геоастро — подготовка к экзамену</title>
+<meta name="description" content="Карточки, тесты, подбор и билеты по геодезической астрономии: 39 вопросов, интервальные повторения, конспект со схемами.">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M16 6l2.6 6.4L25 13l-5 4.2L21.6 24 16 20.4 10.4 24 12 17.2 7 13l6.4-.6z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  try { var t = localStorage.getItem('ga.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="topbar">
+  <a class="brand" href="#/" aria-label="На главную">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.5 6.2 6.6.5-5 4.3 1.6 6.5L12 16.4 6.3 20l1.6-6.5-5-4.3 6.6-.5z"/></svg></span>
+    <span class="brand-text">Геоастро<small>экзамен</small></span>
+  </a>
+  <nav class="topnav" aria-label="Разделы">
+    <a href="#/cards" data-nav="cards">Карточки</a>
+    <a href="#/learn" data-nav="learn">Заучивание</a>
+    <a href="#/test" data-nav="test">Тест</a>
+    <a href="#/match" data-nav="match">Подбор</a>
+    <a href="#/tickets" data-nav="tickets">Билеты</a>
+    <a href="#/notes" data-nav="notes">Конспект</a>
+  </nav>
+  <div class="top-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Поиск (клавиша /)" title="Поиск ( / )"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Сменить тему" title="Тема"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<nav class="bottomnav" aria-label="Разделы">
+  <a href="#/" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Главная</span></a>
+  <a href="#/cards" data-nav="cards"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg><span>Карточки</span></a>
+  <a href="#/test" data-nav="test"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Тест</span></a>
+  <a href="#/tickets" data-nav="tickets"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>Билеты</span></a>
+  <a href="#/more" data-nav="more"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg><span>Ещё</span></a>
+</nav>
+
+<div class="modal" id="searchModal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
+    <label id="searchLabel" for="searchInput" class="sr-only">Поиск по карточкам и билетам</label>
+    <div class="search-row">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Поиск: Цингер, рефракция, 0,3″…" autocomplete="off">
+      <button class="btn ghost sm" id="searchClose">Esc</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
